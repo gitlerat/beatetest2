@@ -7,6 +7,7 @@ tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. A
 eleventyNavigation:
   key: Home
   order: 100
+hero-tagline: THE MARKETING OS for MULTI LOCATION BUSINESSES
 ---
 
 {% extends "layouts/base.html" %}
@@ -73,8 +74,26 @@ eleventyNavigation:
 {% block body %}
 <section><p>Das ist die Startseite</p></section>
 <section class="gallery">
-  {% for galleryItem in collections.gallery %}
-    <img loading="lazy" src="{{ galleryItem.data.image | url }}" alt="{{ galleryItem.data.alt }}" />
-  {% endfor %}
+      {% if collections.post | length == 0 %}
+                <h1>No Recent Posts</h1>
+            {% else %}
+                {%- for post in collections.post | reverse -%}
+                    <article class="recent-articles">
+                        <!--Main Article Image-->
+                        <picture class="blog-mainImage">
+                            <img
+                            src="{{ post.data.image }}"
+                            alt="{{ post.data.imageAlt }}"
+                            width="795"
+                            height="400"
+                            decoding="async"/>
+                        </picture>
+                        <!--Article Info-->
+                                        </article>
+                {%- endfor -%}
+            {% endif %}
+        
+
+
 </section>
 {% endblock %}
