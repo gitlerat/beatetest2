@@ -1,0 +1,41 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+logo_url: https://codestitch.app/frontend/images/logo.png
+
+media_folder: "src/assets/images/blog" # This is for blog images
+public_folder: "/assets/images/blog" # This is for blog images
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "URL Slug",
+          name: "url",
+          widget: "string",
+          hint: 'Specify where the page will be written to. If you use "Blog Post", the post will be accessible from "blog/blog-post"',
+        }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "gallery" # New collection for the gallery
+    label: "Gallery"
+    folder: "src/assets/images/gallery" # Folder where gallery images will be stored
+    create: true # Allow users to create new images
+    slug: "{{slug}}" # Filename template
+    fields:
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Alt Text", name: "alt", widget: "string" }
