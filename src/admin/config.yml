@@ -33,8 +33,7 @@ collections:
   - name: "pages" # Used in routes, e.g., /admin/collections/pages
     label: "Pages"
     folder: "src/content/pages" # Folder where your content files are stored
-    create: true
+    create: false 
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
       - { label: "Content", name: "body", widget: "markdown" }
