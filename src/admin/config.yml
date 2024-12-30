@@ -30,12 +30,11 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Image Caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "Home"
-        name: "home"
-        file: "index.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "hero-tagline", name: "hero-tagline", widget: "string" }
+  - name: "pages" # Used in routes, e.g., /admin/collections/pages
+    label: "Pages"
+    folder: "src/content/pages" # Folder where your content files are stored
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
