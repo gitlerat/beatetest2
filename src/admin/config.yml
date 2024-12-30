@@ -30,12 +30,12 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Image Caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-
-- label: "Pages"
+  - label: "Pages"
     name: "pages"
     files:
       - label: "Home"
         name: "home"
         file: "index.html"
         fields:
-          - { label: hero-tagline, name: hero-tagline, widget: string }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "hero-tagline", name: "hero-tagline", widget: "string" }
