@@ -31,11 +31,3 @@ collections:
       - { label: "Image Caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "gallery" # New collection for the gallery
-    label: "Gallery"
-    folder: "src/assets/images/gallery" # Folder where gallery images will be stored
-    create: true # Allow users to create new images
-    slug: "{{slug}}" # Filename template
-    fields:
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Alt Text", name: "alt", widget: "string" }

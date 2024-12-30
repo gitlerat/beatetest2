@@ -1,4 +1,4 @@
 ---
-image: /assets/images/blog/schmal.png
-alt: sdadsad
+image: "/assets/images/blog/schmal.png"
+alt: "sdadsad"
 ---

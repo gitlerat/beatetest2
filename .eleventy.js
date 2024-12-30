@@ -11,10 +11,7 @@ const configServer = require("./src/config/server");
 const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
 
-module.exports = function (eleventyConfig) {
- eleventyConfig.addCollection("gallery", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/content/gallery/*.md");
-  });
+
 // Add Watch Target for SCSS Directory
     eleventyConfig.addWatchTarget("./src/assets/sass/");
 

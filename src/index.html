@@ -74,7 +74,7 @@ eleventyNavigation:
 <section><p>Das ist die Startseite</p></section>
 <section class="gallery">
   {% for galleryItem in collections.gallery %}
-    <img loading="lazy" src="{{ galleryItem.image | url }}" alt="{{ galleryItem.alt }}" />
+    <img loading="lazy" src="{{ galleryItem.data.image | url }}" alt="{{ galleryItem.data.alt }}" />
   {% endfor %}
 </section>
 {% endblock %}
