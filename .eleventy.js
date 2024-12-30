@@ -11,7 +11,7 @@ const configServer = require("./src/config/server");
 const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
 
-
+module.exports = function (eleventyConfig) {
 // Add Watch Target for SCSS Directory
     eleventyConfig.addWatchTarget("./src/assets/sass/");
 
