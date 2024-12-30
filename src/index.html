@@ -73,8 +73,8 @@ eleventyNavigation:
 {% block body %}
 <section><p>Das ist die Startseite</p></section>
 <section class="gallery">
-  {% for image in site.collections.gallery.entries %}
-    <img loading="lazy" src="{{ image.image | relative_url }}" alt="{{ image.alt }}" />
+  {% for galleryItem in collections.gallery %}
+    <img loading="lazy" src="{{ galleryItem.image | url }}" alt="{{ galleryItem.alt }}" />
   {% endfor %}
 </section>
 {% endblock %}
